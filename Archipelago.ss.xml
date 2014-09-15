@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ss="http://tshibata.github.io/2013/stasc" width="320px" height="240px">
+	<defs>
+		<filter id="archipelago">
+			<feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="10" seed="1" result="t">
+				<ss:attribute name="Seed" order="0" target="seed"/>
+
+			</feTurbulence>
+
+			<feColorMatrix in="t" values="0,0,0,1.2,-0.2, 0,0,0,1.2,-0.2, 0,0,0,1.2,-0.2, 0,0,0,1.2,-0.2" result="white"/>
+
+            <feComponentTransfer in="white" result="water">
+                <feFuncR type="table" tableValues="0,0.1,1"/>
+                <feFuncG type="table" tableValues="0.4,0.6,1"/>
+                <feFuncB type="table" tableValues="1,0.9,0.5"/>
+                <feFuncA type="discrete" tableValues="1"/>
+            </feComponentTransfer>
+
+            <feComponentTransfer in="white" result="sand">
+                <feFuncR type="discrete" tableValues="0,1,1,1"/>
+                <feFuncG type="discrete" tableValues="0,1,1,1"/>
+                <feFuncB type="discrete" tableValues="1,0.5,0.5,0.5"/>
+                <feFuncA type="discrete" tableValues="0,1,1,1"/>
+            </feComponentTransfer>
+
+            <feComponentTransfer in="white" result="fertile">
+                <feFuncA type="discrete" tableValues="0,1,1"/>
+            </feComponentTransfer>
+
+			<feDiffuseLighting in="white" lighting-color="green" surfaceScale="10" result="green">
+				<feDistantLight azimuth="225" elevation="45"/>
+			</feDiffuseLighting>
+
+			<feComposite in="green" in2="fertile" operator="in" result="plants"/>
+
+			<feMerge>
+				<feMergeNode in="water"/>
+				<feMergeNode in="sand"/>
+				<feMergeNode in="plants"/>
+			</feMerge>
+
+		</filter>
+	</defs>
+	<rect x="0" y="0" width="320" height="240" filter="url(#archipelago)"/>
+</svg>
+
