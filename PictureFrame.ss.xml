@@ -1,0 +1,40 @@
+<div xmlns:ss="http://tshibata.github.io/2013/stasc" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<ss:plug name="Picture">
+		<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240">
+			<rect x="0" y="0" width="320" height="240" stroke="none" fill="#0AF"/>
+			<a xlink:href="https://github.com/tshibata/rorschach_reminder" target="_blank">
+				<text x="160" y="30" text-anchor="middle">
+Rorschach Reminder
+				</text>
+			</a>
+			<text x="160" y="60" text-anchor="middle">
+Enter your email address
+			</text>
+			<text x="160" y="80" text-anchor="middle">
+and proceed to password.
+			</text>
+			<text x="160" y="100" text-anchor="middle">
+You will see here a picture of islands.
+			</text>
+			<text x="160" y="120" text-anchor="middle">
+Try to express any of them,
+			</text>
+			<text x="160" y="140" text-anchor="middle">
+like "cheeky face with flowers"
+			</text>
+			<text x="160" y="160" text-anchor="middle">
+or "big S above three dots".
+			</text>
+			<text x="160" y="180" text-anchor="middle">
+You can use it as a hint of your password.
+			</text>
+			<text x="160" y="200" text-anchor="middle">
+It always reminds you your password
+			</text>
+			<text x="160" y="220" text-anchor="middle">
+but gives almost no clue to others.
+			</text>
+		</svg>
+	</ss:plug>
+</div>
+
